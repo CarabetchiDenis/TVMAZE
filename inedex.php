@@ -49,17 +49,17 @@
         function search_tv() {
             var input_tv = document.getElementById("input_tv").value;
 
-            var endpoint = "https://api.tvmaze.com/search/shows?q=";
-            var requested_endpoint = endpoint + "?query" + input_tv;
+            var endpoint = "https://api.tvmaze.com/search/shows";            
+            var requested_endpoint = endpoint + "?q=" + input_tv;
 
             var output ="";
 
-            //console.log(requested_endpoint);
+            console.log(requested_endpoint);
             
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                  
+                  //  output = JSON.parse(http.reponseText);
 
                     var number_tv = output.lenght;
                     for (var i = 0; i < number_tv; i ++) {
